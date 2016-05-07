@@ -15,7 +15,16 @@ class RomanNumeralsConverter
 
     public function convert($number) {
 
-        
+        $numeral = '';
+        foreach (self::$romanNumerals as $key => $value) {
+            $i = (int) $number / $key;
+            if ($i != 0) {
+                $numeral .= str_repeat($value, $i);
+            }
+            $number = $number % $key;
+        }
+
+        return $numeral;
     }
 
 }
