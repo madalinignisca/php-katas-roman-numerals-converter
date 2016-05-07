@@ -31,4 +31,19 @@ class RomanNumeralsConverterSpec extends ObjectBehavior
     {
         $this->convert(3333)->shouldReturn('MMMCCCXXXIII');
     }
+
+    function it_calculates_the_roman_numeral_for_900()
+    {
+        $this->convert(900)->shouldReturn('CM');
+    }
+
+    function it_calculates_the_roman_numeral_for_500()
+    {
+        $this->convert(500)->shouldReturn('D');
+    }
+
+    function it_calculates_the_roman_numeral_for_400()
+    {
+        $this->convert(400)->shouldReturn('CD');
+    }
 }
