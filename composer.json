@@ -1,0 +1,21 @@
+{
+    "name": "madalinignisca/roman-numerals-converter",
+    "description": "Roman Numerals Converter Kata in PHP",
+    "require-dev": {
+        "phpspec/phpspec": "~2.0"
+    },
+    "license": "Apache2",
+    "authors": [
+        {
+            "name": "Madalin Ignisca",
+            "email": "madalin.ignisca@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-0": {
+            "": "src"
+        }
+    }
+}
