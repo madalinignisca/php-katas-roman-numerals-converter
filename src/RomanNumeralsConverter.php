@@ -18,19 +18,24 @@ class RomanNumeralsConverter
       $number = $number % key($numerals);
       switch ($i) {
           case 9:
-            $str = current($numerals);
-            prev($numerals);
-            $str .= prev($numerals);
-            break;
-          case 5:
-            $str = prev($numerals);
-            break;
+              $str = current($numerals);
+              prev($numerals);
+              $str .= prev($numerals);
+              next($numerals);
+              next($numerals);
+              break;
           case 4:
-            $str = current($numerals) . prev($numerals);
-            break;
+              $str = current($numerals) . prev($numerals);
+              next($numerals);
+              break;
           default:
-            $str = str_repeat(current($numerals), $i);
-            break;
+              $str = '';
+              if ((int) ($i / 5) == 1) {
+                  $str .= prev($numerals);
+                  next($numerals);
+              }
+              $str .= str_repeat(current($numerals), $i % 5);
+              break;
       }
       $numeral .= $str;
       if (next($numerals) && $number != 0) {
