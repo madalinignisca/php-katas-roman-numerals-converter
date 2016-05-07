@@ -12,6 +12,16 @@ class RomanNumeralsConverterSpec extends ObjectBehavior
         $this->shouldHaveType('RomanNumeralsConverter');
     }
 
+    function it_calculates_the_roman_numeral_for_1876543()
+    {
+        $this->convert(1876543)->shouldReturn('ḾĎČČČĹẊẊṼMDXLIII');
+    }
+
+    function it_calculates_the_roman_numeral_for_9000()
+    {
+        $this->convert(9000)->shouldReturn('MẊ');
+    }
+
     function it_calculates_the_roman_numeral_for_3000()
     {
         $this->convert(3000)->shouldReturn('MMM');

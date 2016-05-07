@@ -4,6 +4,12 @@ class RomanNumeralsConverter
 {
 
     public static $romanNumerals = [
+      1000000 => 'Ḿ',
+      500000 => 'Ď',
+      100000 => 'Č',
+      50000 => 'Ĺ',
+      10000 => 'Ẋ',
+      5000 => 'Ṽ',
       1000 => 'M',
       500 => 'D',
       100 => 'C',
